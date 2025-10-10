@@ -19,6 +19,18 @@ const DetailPage: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 animate-fade-in">
+        {item.videoUrl && (
+          <div className="aspect-w-16 aspect-h-9 mb-6">
+            <iframe
+              className="w-full h-64 md:h-[420px] rounded-md"
+              src={item.videoUrl}
+              title={item.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        )}
         <Link to="/" className="inline-block mb-8 text-lg text-[#E6C029] hover:underline transition-colors duration-300">
           &larr; Volver a la lista
         </Link>

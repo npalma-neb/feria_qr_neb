@@ -14,6 +14,14 @@ const ListPage: React.FC = () => {
             key={item.id}
             className="block bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-[#E6C029]/20 transform hover:-translate-y-2 transition-all duration-300 overflow-hidden group"
           >
+            {item.imageUrl && (
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="h-48 w-full object-cover"
+                loading="lazy"
+              />
+            )}
             <div className="p-6">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#E6C029] transition-colors duration-300">{item.title}</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{item.shortDescription}</p>
