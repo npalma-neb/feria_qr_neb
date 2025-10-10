@@ -1,0 +1,5 @@
+{
+  "name": "NEB Chile Product Showcase",
+  "description": "A simple and elegant web page to showcase a list of products for NEB Chile, with detail pages for each item and a light/dark mode theme switcher.",
+  "requestFramePermissions": []
+}
