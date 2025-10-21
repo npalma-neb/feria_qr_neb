@@ -4,6 +4,7 @@ import { Theme } from './types';
 import Layout from './components/Layout';
 import ListPage from './pages/ListPage';
 import DetailPage from './pages/DetailPage';
+import EmailGate from './components/EmailGate';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(() => {
@@ -41,8 +42,19 @@ const App: React.FC = () => {
     setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
   };
 
+  const [showGate, setShowGate] = useState<boolean>(() => {
+    try {
+      const dismissed = window.localStorage.getItem('emailGateDismissed') === 'true';
+      const submitted = window.localStorage.getItem('emailSubmitted') === 'true';
+      return !(dismissed || submitted);
+    } catch (_) {
+      return true;
+    }
+  });
+
   return (
     <Layout theme={theme} toggleTheme={toggleTheme}>
+      <EmailGate open={showGate} onClose={() => setShowGate(false)} />
       <Routes>
         <Route path="/" element={<ListPage />} />
         <Route path="/item/:id" element={<DetailPage />} />
