@@ -2,9 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ITEMS } from '../constants';
 
-const ListPage: React.FC = () => {
+interface ListPageProps {
+  showSorteoBanner?: boolean;
+  onSorteoClick?: () => void;
+}
+
+const ListPage: React.FC<ListPageProps> = ({ showSorteoBanner = false, onSorteoClick }) => {
   return (
     <div className="animate-fade-in">
+      {showSorteoBanner && (
+        <div className="mb-6">
+          <div className="rounded-lg bg-[#FFF8D6] dark:bg-[#3A3417] border border-[#E6C029] text-gray-900 dark:text-gray-100 px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div className="text-sm sm:text-base">
+              <strong className="font-semibold">Participa en el sorteo:</strong> deja tu correo y entra a ganar.
+            </div>
+            <button
+              onClick={onSorteoClick}
+              className="inline-flex items-center justify-center rounded-md bg-[#E6C029] text-black font-semibold px-4 py-2 hover:brightness-95 transition"
+            >
+              Participar
+            </button>
+          </div>
+        </div>
+      )}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2 text-center">Nuestros Productos</h1>
       <p className="text-center text-lg text-gray-600 dark:text-gray-400 mb-10">Descubra nuestra selección de soluciones innovadoras.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

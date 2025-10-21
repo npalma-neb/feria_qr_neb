@@ -52,11 +52,29 @@ const App: React.FC = () => {
     }
   });
 
+  const [hasSubmitted, setHasSubmitted] = useState<boolean>(() => {
+    try {
+      return window.localStorage.getItem('emailSubmitted') === 'true';
+    } catch (_) {
+      return false;
+    }
+  });
+
+  const handleGateClose = () => {
+    setShowGate(false);
+    try {
+      setHasSubmitted(window.localStorage.getItem('emailSubmitted') === 'true');
+    } catch (_) {}
+  };
+
   return (
     <Layout theme={theme} toggleTheme={toggleTheme}>
-      <EmailGate open={showGate} onClose={() => setShowGate(false)} />
+      <EmailGate open={showGate} onClose={handleGateClose} />
       <Routes>
-        <Route path="/" element={<ListPage />} />
+        <Route
+          path="/"
+          element={<ListPage showSorteoBanner={!hasSubmitted} onSorteoClick={() => setShowGate(true)} />}
+        />
         <Route path="/item/:id" element={<DetailPage />} />
       </Routes>
     </Layout>
