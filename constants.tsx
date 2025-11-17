@@ -21,7 +21,8 @@ export const ITEMS: Item[] = [
       'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     ],
     imageUrl: '/imagen2.jpg',
-    videoUrl: 'https://drive.google.com/file/d/15bpAcRuGd7ZezwfwPumx5Cr8DkZc8G5U/preview'
+    videoUrl: 'https://drive.google.com/file/d/15bpAcRuGd7ZezwfwPumx5Cr8DkZc8G5U/preview',
+    videoAspect: 'portrait'
   },
   {
     id: 3,

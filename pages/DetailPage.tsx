@@ -17,13 +17,17 @@ const DetailPage: React.FC = () => {
     );
   }
 
+  const isPortrait = item?.videoAspect === 'portrait';
+
   return (
     <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8 animate-fade-in">
         {item.videoUrl && (
           <div className="mb-6">
-            <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+            <div
+              className={`relative w-full ${isPortrait ? 'aspect-[9/16] md:aspect-video' : 'aspect-video'}`}
+            >
               <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-md"
+                className="absolute inset-0 w-full h-full rounded-md"
                 src={item.videoUrl}
                 title={item.title}
                 frameBorder="0"

@@ -5,6 +5,7 @@ export interface Item {
   longDescription: string[];
   imageUrl: string;
   videoUrl: string;
+  videoAspect?: 'portrait' | 'landscape';
 }
 
 export enum Theme {
