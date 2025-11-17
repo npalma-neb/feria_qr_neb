@@ -11,7 +11,8 @@ export const ITEMS: Item[] = [
       'Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.'
     ],
     imageUrl: '/imagen1.jpg',
-    videoUrl: 'https://www.youtube.com/embed/_U_G1s70CwU'
+    videoUrl: 'https://drive.google.com/file/d/1E9fSNGs4j0sETg5n7EIydRmBJwBIftKD/preview',
+    videoAspect: 'portrait'
   },
   {
     id: 2,
@@ -32,7 +33,8 @@ export const ITEMS: Item[] = [
       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     ],
     imageUrl: '/imagen3.jpg',
-    videoUrl: 'https://www.youtube.com/embed/zJ5BlKM4L3o'
+    videoUrl: 'https://drive.google.com/file/d/1XQGRA-RnZ_ysLYgKvVcSbD4t3SBESk7I/preview',
+    videoAspect: 'portrait'
   },
   {
     id: 4,
