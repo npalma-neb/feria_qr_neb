@@ -4,34 +4,34 @@ import { Item } from './types';
 export const ITEMS: Item[] = [
   {
     id: 1,
-    title: 'Producto 1',
-    shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'SmartEye',
+    shortDescription: 'Sistema de monitoreo remoto.',
     longDescription: [
       'Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',
       'Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.'
     ],
     imageUrl: '/imagen1.jpg',
-    videoUrl: 'https://www.youtube.com/embed/tW-nZ2eMlEc'
+    videoUrl: 'https://www.youtube.com/embed/_U_G1s70CwU'
   },
   {
     id: 2,
-    title: 'Producto 2',
-    shortDescription: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Importancia de intercambiadores de calor y limpieza',
+    shortDescription: 'Intercambiadores de calor y limpieza son esenciales para mantener la temperatura y la humedad en el ambiente.',
     longDescription: [
       'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     ],
     imageUrl: '/imagen2.jpg',
-    videoUrl: 'https://www.youtube.com/embed/zyWdkmUC8FU'
+    videoUrl: 'https://www.youtube.com/embed/XWs5YSoyISA'
   },
   {
     id: 3,
-    title: 'Producto 3',
-    shortDescription: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+    title: 'Limpieza de agua, intercambiadores de calor y filtros',
+    shortDescription: 'Limpieza de agua, intercambiadores de calor y filtros son esenciales para mantener la calidad del agua y la temperatura en el ambiente.',
     longDescription: [
       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     ],
     imageUrl: '/imagen3.jpg',
-    videoUrl: 'https://www.youtube.com/embed/Uc-04Lbt_YE'
+    videoUrl: 'https://www.youtube.com/embed/zJ5BlKM4L3o'
   },
   {
     id: 4,
