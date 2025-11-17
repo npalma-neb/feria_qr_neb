@@ -114,9 +114,9 @@ const EmailGate: React.FC<EmailGateProps> = ({ open, onClose }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" aria-hidden="true" />
       <div className="relative w-full max-w-md mx-4 rounded-xl shadow-2xl bg-white dark:bg-gray-800 p-6 sm:p-8">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Participa en el sorteo</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Aprende con nosotros</h2>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-5">
-          Déjanos tu correo para participar y recibir novedades. Puedes omitir si prefieres.
+          Déjanos tu correo para aprender con nosotros y recibir novedades. Puedes omitir si prefieres.
         </p>
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" htmlFor="gate-email">Correo electrónico</label>
         <input
