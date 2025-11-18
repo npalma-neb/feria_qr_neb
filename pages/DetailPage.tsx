@@ -40,9 +40,9 @@ const DetailPage: React.FC = () => {
     <div className="max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 sm:p-8 animate-fade-in">
       <div className="grid md:grid-cols-2 gap-6 md:gap-8">
         {/* Video a la izquierda: 9:16 si es vertical, 16:9 si no */}
-        <div>
+        <div className="md:overflow-hidden">
           {item.videoUrl && (
-            <div className={`relative w-full ${isPortrait ? 'aspect-[9/16]' : 'aspect-video'}`}>
+            <div className={`relative w-full ${isPortrait ? 'aspect-[9/16] md:max-h-[85vh] md:max-w-[calc(85vh*0.5625)] md:mx-auto' : 'aspect-video md:mx-auto'}`}>
               <iframe
                 className="absolute inset-0 w-full h-full rounded-md"
                 src={videoSrc}
