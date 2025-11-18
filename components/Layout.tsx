@@ -19,6 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children, theme, toggleTheme }) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-5 text-gray-600 dark:text-gray-300">
+              <span className="text-sm sm:text-base font-medium">Síguenos en nuestras redes:</span>
               <a
                 href="https://www.youtube.com/@nebchile8019/featured"
                 target="_blank"
